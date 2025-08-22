@@ -1,0 +1,246 @@
+/* font-family: "Strait", sans-serif; */
+.lightMood {
+  /* ----bg-color--  */
+  --bg-primary-filter: #ffffffb9;
+  --bg-primary-card: #ffffff;
+  --bg-secondary-card: #ffffff80;
+  --bg-secondary-card2-light: #efefef;
+  /* -----bg solid color----  */
+  --bg-black-card: #ffffff;
+  --bg-white-card: #000000;
+
+  /* ---gradient-bg-color-----------  */
+  --filter-blk: #ffffffc4;
+  --filter-wht: #0000000d;
+
+  --gradient-1-light: linear-gradient(
+    180deg,
+    #eeeeee 0%,
+    #e5e5e5 60%,
+    #d4f0fa 100%
+  );
+  --gradient-2-light: linear-gradient(135deg, #dcdcdc 0%, #9ecfe2 100%);
+    --gradient-3: linear-gradient(135deg, #f3f3f3 0%, #39c3f7 100%);
+
+  /* ---------------text-color-----------  */
+
+  --txt-wht: #000000;
+  --txt-grey: #00000099;
+  --txt-red: #0CAFF0;
+  --txt-other:  #0000000a;
+
+    /*others color*/
+  --scrollbar-color: #ffffff;
+  --scrollbar-thump: #f0743e;
+  --scrollbar-hover: #7b8173;
+
+}
+
+:root {
+  /* ----bg-color--  */
+  --bg-primary-filter: #000000dc;
+  --bg-primary-card: #111111;
+  --bg-secondary-card: #25252580;
+  --bg-secondary-card2: #101010;
+  /* -----bg solid color----  */
+  --bg-black-card: #000000;
+  --bg-white-card: #ffffff;
+
+  /* ---gradient-bg-color-----------  */
+
+  --filter-blk: #000001c4;
+  --filter-wht: #ffffff0d;
+
+  --gradient-1: linear-gradient(180deg, #111111 0%, #1a1a1a 60%, #2b0f05 100%);
+  --gradient-2: linear-gradient(135deg, #232323 0%, #61301d 100%);
+  --gradient-3: linear-gradient(135deg, #0c0c0c 0%, #c63c08 100%);
+
+
+
+  /* ---------------text-color-----------  */
+  --txt-wht: #ffffff;
+  --txt-grey: #ffffff99;
+  --txt-red: #F3500F;
+  --txt-other: #ffffff0a;
+
+  /*others color*/
+  --scrollbar-color: #ffffff;
+  --scrollbar-thump: #f0743e;
+  --scrollbar-hover: #7b8173;
+
+  /* transition  */
+  --transition-1: 0.2s ease;
+  --transition-2: 0.3s ease;
+  --transition-3: 0.5s ease;
+
+
+  /* -------------font-size--------  */
+  --h1: ;
+  --h1: ;
+  --h1: ;
+  --h1: ;
+  --h1: ;
+
+  --font-16: 1rem;
+  --font-18: 1.125rem;
+  --font-20: 1.25rem;
+
+  --font-74: 4.688rem;
+  
+}
+
+/* ----------------------------------------
+       ============= reset css  ==============
+       -------------------------------------------*/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+
+a,
+img,
+input,
+button,
+i,
+textarea {
+  display: block;
+  text-transform: capitalize;
+  font-family: "Strait", sans-serif;
+  
+}
+button {
+  background: none;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  width: fit-content;
+}
+.btn {
+  max-width: 100%;
+  width: fit-content;
+  cursor: pointer;
+
+  text-align: center;
+  border-radius: 10px;
+  padding: 8px 25px;
+  transition: all 0.4s ease-in-out;
+  text-transform: capitalize;
+  overflow: hidden;
+  outline: 0;
+}
+
+a {
+  text-decoration: none;
+}
+img {
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 0 auto;
+  position: relative;
+  transition: all 0.5s ease-in-out;
+  overflow-x: hidden;
+  font-family: "Strait", sans-serif;
+  background: var(--bg-primary-filter);
+  color: var(--txt-wht);
+  animation: fadeed 0.5s ease-in-out;
+  
+}
+
+@keyframes fadeed {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes wiggle {
+  0%,
+  5% {
+    transform: rotateZ(0);
+  }
+  15% {
+    transform: rotateZ(-15deg);
+  }
+  20% {
+    transform: rotateZ(15deg);
+  }
+  25% {
+    transform: rotateZ(-15deg);
+  }
+  30% {
+    transform: rotateZ(10deg);
+  }
+  35% {
+    transform: rotateZ(-15deg);
+  }
+  40%,
+  100% {
+    transform: rotateZ(0);
+  }
+}
+
+
+/* ==========================================================
+ =====================ID section customizing=============== 
+============================================================ */
+
+/* ============----page scroll bar-----============== */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  overflow: hidden;
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 100px;
+  
+  transition: 0.3s;
+}
+::-webkit-scrollbar-thumb:hover {
+  opacity: 0.6;
+  
+}
+
+/* =====================others=========================== */
+.container {
+  max-width: 100%;
+  position: relative;
+  padding: 0.5% 2%;
+}
+section {
+ padding: 5% 10%;
+  max-width: 100%;
+  position: relative;
+  transition: var(--transition-1);
+}
+header,
+main,
+footer {
+  position: relative;
+}
+
+/* --------------------------------------------------------------
+-----------------------header start here----------------------
+-------------------------------------------------------------- */
