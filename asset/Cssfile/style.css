@@ -1,16 +1,16 @@
 /* font-family: "Strait", sans-serif; */
 .lightMood {
   /* ----bg-color--  */
-  --bg-primary-filter: #ffffffb9;
+  --bg-primary-filter: #ffffff1f;
   --bg-primary-card: #ffffff;
   --bg-secondary-card: #ffffff80;
   --bg-secondary-card2-light: #efefef;
   /* -----bg solid color----  */
   --bg-black-card: #ffffff;
-  --bg-white-card: #000000;
+  --bg-white-card: #00000056;
 
   /* ---gradient-bg-color-----------  */
-  --filter-blk: #ffffffc4;
+  --filter-blk: #ffffffd7;
   --filter-wht: #0000000d;
 
   --gradient-1-light: linear-gradient(
@@ -20,20 +20,19 @@
     #d4f0fa 100%
   );
   --gradient-2-light: linear-gradient(135deg, #dcdcdc 0%, #9ecfe2 100%);
-    --gradient-3: linear-gradient(135deg, #f3f3f3 0%, #39c3f7 100%);
+  --gradient-3: linear-gradient(135deg, #f3f3f3 0%, #39c3f7 100%);
 
   /* ---------------text-color-----------  */
 
   --txt-wht: #000000;
   --txt-grey: #00000099;
-  --txt-red: #0CAFF0;
-  --txt-other:  #0000000a;
+  --txt-red: #0caff0;
+  --txt-other: #0000000a;
 
-    /*others color*/
+  /*others color*/
   --scrollbar-color: #ffffff;
   --scrollbar-thump: #f0743e;
   --scrollbar-hover: #7b8173;
-
 }
 
 :root {
@@ -44,23 +43,21 @@
   --bg-secondary-card2: #101010;
   /* -----bg solid color----  */
   --bg-black-card: #000000;
-  --bg-white-card: #ffffff;
+  --bg-white-card: #ffffff3a;
 
   /* ---gradient-bg-color-----------  */
 
-  --filter-blk: #000001c4;
+  --filter-blk: #00000169;
   --filter-wht: #ffffff0d;
 
   --gradient-1: linear-gradient(180deg, #111111 0%, #1a1a1a 60%, #2b0f05 100%);
   --gradient-2: linear-gradient(135deg, #232323 0%, #61301d 100%);
   --gradient-3: linear-gradient(135deg, #0c0c0c 0%, #c63c08 100%);
 
-
-
   /* ---------------text-color-----------  */
   --txt-wht: #ffffff;
   --txt-grey: #ffffff99;
-  --txt-red: #F3500F;
+  --txt-red: #f3500f;
   --txt-other: #ffffff0a;
 
   /*others color*/
@@ -73,20 +70,18 @@
   --transition-2: 0.3s ease;
   --transition-3: 0.5s ease;
 
-
   /* -------------font-size--------  */
-  --h1: ;
-  --h1: ;
-  --h1: ;
-  --h1: ;
-  --h1: ;
+  --h1: 5rem;
+  --h2: 4.688rem;
+  --h3: 4rem;
+  --h4: 2.5rem;
+  --h5: 2.25rem;
+  --h6: 1rem;
 
   --font-16: 1rem;
   --font-18: 1.125rem;
   --font-20: 1.25rem;
-
-  --font-74: 4.688rem;
-  
+  --font-24: 1.5rem;
 }
 
 /* ----------------------------------------
@@ -112,7 +107,6 @@ textarea {
   display: block;
   text-transform: capitalize;
   font-family: "Strait", sans-serif;
-  
 }
 button {
   background: none;
@@ -149,17 +143,19 @@ html {
 }
 body {
   max-width: 100%;
-  height: auto;
-  margin: 0 auto;
-  padding: 0 auto;
-  position: relative;
   transition: all 0.5s ease-in-out;
-  overflow-x: hidden;
+
   font-family: "Strait", sans-serif;
   background: var(--bg-primary-filter);
   color: var(--txt-wht);
   animation: fadeed 0.5s ease-in-out;
-  
+    position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100vh;
 }
 
 @keyframes fadeed {
@@ -198,7 +194,33 @@ body {
   }
 }
 
-
+h1{
+  font-size: var(--h1);
+}
+h2{
+  font-size: var(--h2);
+}
+h3{
+  font-size: var(--h3);
+}
+h4{
+  font-size: var(--h4);
+}
+h5{
+  font-size: var(--h5);
+}
+.font-16{
+  font-size: var(--font-16);
+}
+.font-18{
+  font-size: var(--font-18);
+}
+.font-20{
+  font-size: var(--font-20);
+}
+.font-24{
+  font-size: var(--font-24);
+}
 /* ==========================================================
  =====================ID section customizing=============== 
 ============================================================ */
@@ -215,12 +237,11 @@ body {
 
 ::-webkit-scrollbar-thumb {
   border-radius: 100px;
-  
+
   transition: 0.3s;
 }
 ::-webkit-scrollbar-thumb:hover {
   opacity: 0.6;
-  
 }
 
 /* =====================others=========================== */
@@ -228,15 +249,36 @@ body {
   max-width: 100%;
   position: relative;
   padding: 0.5% 2%;
+  
 }
 section {
- padding: 5% 10%;
+  padding: 1.5% 20%;
   max-width: 100%;
   position: relative;
   transition: var(--transition-1);
+  border-bottom: 1px solid var(--bg-white-card);
+}
+section::after{
+  position: absolute;
+  top: 0;
+  left: 250px;
+  width: 1px;
+  height: 100%;
+  content: '';
+  background: var(--bg-white-card);
+  
+}
+section::before{
+  position: absolute;
+  top: 0;
+  right: 250px;
+  width: 1px;
+  height: 100%;
+  content: '';
+  background: var(--bg-white-card);
+  
 }
 header,
-main,
 footer {
   position: relative;
 }
@@ -244,3 +286,294 @@ footer {
 /* --------------------------------------------------------------
 -----------------------header start here----------------------
 -------------------------------------------------------------- */
+
+#verticleNav{
+  padding: 0;
+  margin: 0;
+}
+
+main{
+  position:absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  z-index: 1;
+  background: var(--filter-blk);
+  backdrop-filter: blur(5px);
+  
+  
+}
+body .bodyVideo{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+nav{
+  position: fixed;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+  width: 60px;
+  height: auto;
+  background: var(--bg-primary-card);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 5px;
+  border-radius: 25px;
+  z-index: 999;
+  border: 1px solid var(--filter-wht);
+}
+nav .nav-body{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  position: relative;
+  transition: var(--transition-1);
+}
+.nav-body .navLink{
+  background: var(--bg-primary-card);
+  border-radius: 50%;
+  border: 1px solid var(--bg-primary-card);
+  width: 100%;
+  text-align: center;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--txt-wht);
+  font-size: var(--font-18);
+  transition: var(--transition-2);
+  position: relative;
+}
+.nav-body .navLink:hover{
+  background: var(--filter-wht);
+}
+.nav-body .navLink.active{
+  background: var(--bg-white-card);
+  color: var(--txt-wht);
+  font-size: var(--font-20);
+  
+}
+.navLink.active i{
+  animation: wiggle 2s linear infinite;
+}
+ .nav-body .navLink.active:hover{
+  opacity: 0.7;
+}
+.navLink span{
+  position: absolute;
+  top: 50%;
+  opacity: 0;
+  transform: translateY(-50%);
+  left: -118px;
+  border-radius: 10px 0 10px 10px;
+  font-size: var(--font-16);
+  width: 110px;
+  height: auto;
+  padding: 8px 15px;
+  font-weight: 300;
+  background: var(--bg-secondary-card);
+  color: var(--txt-wht);
+  transition: var(--transition-3);
+}
+.navLink:hover span{
+  opacity: 1;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.toggle{
+  position: absolute;
+  top: 5%;
+  right: 5%;
+   display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 55px;
+  height: 30px;
+  gap: 3px;
+background: var(--bg-secondary-card);
+box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+border: 2px solid var(--filter-wht);
+  border-radius: 35px;
+  z-index: 10;
+  transition: var(--transition-2);
+}
+.toggle .toggleOn,
+.toggle .toggleOff {
+  width: 20px;
+  border-radius: 50%;
+  height: 20px;
+  cursor: pointer;
+  transition: var(--transition-1);
+  border: 1px solid transparent;
+}
+.toggle .toggleOn:hover,
+.toggle .toggleOff:hover {
+  border: 1px solid var(--scrollbar-thump);
+}
+.toggleOn {
+  background: #000;
+  color: var(--txt-wht);
+
+  animation: wiggle 5s linear infinite;
+}
+.toggleOff {
+  background: #ffffff9f;
+  color: var(--txt-wht);
+  animation: wiggle 4s linear infinite;
+}
+
+
+
+/* ======================head------------  */
+#head{
+  position: relative;
+  width: 100%;
+  height: auto;
+  transition: var(--transition-1);
+    background: var(--filter-blk);
+  
+ 
+}
+#head .s-1{
+  position: absolute;
+  content: '';
+  width: 5px;
+  height: 5px;
+  top: 0;
+  left: 250px;
+  background: var(--txt-grey);
+}
+#head .s-2{
+  position: absolute;
+  content: '';
+  width: 5px;
+  height: 5px;
+ bottom: 0;
+  left: 250px;
+  background:var(--txt-grey);
+
+}
+#head .s-3{
+  position: absolute;
+  content: '';
+  width: 5px;
+  height: 5px;
+ top: 0;
+  right: 250px;
+  background: var(--txt-grey);
+
+}
+#head .s-4{
+  position: absolute;
+  content: '';
+  width: 5px;
+  height: 5px;
+ bottom: 0;
+  right: 250px;
+  background: var(--txt-grey);
+
+}
+#head .head-container{
+  max-width: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+  transition: var(--transition-1);
+}
+.head-container .logo{
+  width: 180px;
+  height: 50px;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  background: #000000c5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo img{
+  width: 100%;
+  height: 100%;
+  margin-top: -8px;
+  margin-left: 10px;
+}
+.available-badge{
+  max-width: 100%;
+  width: fit-content;
+  background: var(--filter-blk);
+  border-radius: 25px;
+  border: 2px solid var(--bg-secondary-card);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+.available-badge .g-dot{
+  width: 10px;
+  height: 10px;
+  background: rgb(8, 219, 8);
+  border-radius: 50%;
+}
+.available-badge .font-16{
+  font-weight: 300;
+  max-width: 100%;
+  margin-left: 5px;
+  color: var(--txt-wht);
+}
+.available-badge p span{
+  color: var(--txt-grey);
+}
+.head-container .head-pan{
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 5px;
+}
+
+
+
+/* ======================hero------------  */
+section#hero{
+  position: relative;
+  background: var(--bg-black-card);
+  width: 100%;
+  height: 100vh;
+  transition: var(--transition-1);
+  z-index: 1;
+ 
+}
+#hero video{
+  position: absolute;
+  width: 80%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+top: 0;
+left: 50%;
+transform: translateX(-50%);
+opacity: 0.5;
+  
+  
+}
+
+#hv-1{
+  display: block;
+}
+#hv-2{
+  display: none;
+}
