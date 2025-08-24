@@ -21,6 +21,16 @@
   );
   --gradient-2-light: linear-gradient(135deg, #dcdcdc 0%, #9ecfe2 100%);
   --gradient-3: linear-gradient(135deg, #f3f3f3 0%, #39c3f7 100%);
+  --gradient-4A: linear-gradient(to right , #ffffff , ##F9F9F9);
+  --gradient-4B: linear-gradient(to left , #ffffff , ##F9F9F9);
+
+    
+      --background-gr: linear-gradient(
+  135deg,
+  #AFFCFCee 0%,
+  #50CAF7 40%,
+  #7F92F8fb 80%
+);
 
   /* ---------------text-color-----------  */
 
@@ -53,6 +63,11 @@
   --gradient-1: linear-gradient(180deg, #111111 0%, #1a1a1a 60%, #2b0f05 100%);
   --gradient-2: linear-gradient(135deg, #232323 0%, #61301d 100%);
   --gradient-3: linear-gradient(135deg, #0c0c0c 0%, #c63c08 100%);
+
+  --gradient-4A: linear-gradient(to right , #000000 , transparent);
+  --gradient-4B: linear-gradient(to left , #000000 , transparent);
+
+  --background-gr: linear-gradient(135deg, #500303ee 0%, #af3508 40%, #806d07fb 80%);
 
   /* ---------------text-color-----------  */
   --txt-wht: #ffffff;
@@ -552,14 +567,42 @@ section#hero{
   position: relative;
   background: var(--bg-black-card);
   width: 100%;
-  height: 100vh;
+  height: 140vh;
   transition: var(--transition-1);
   z-index: 1;
  
 }
+  section#hero::after,
+ section#hero::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        width: 200px;
+        height: 100%;
+        z-index: 1;
+        pointer-events: none;
+    }
+  
+    section#hero::before {
+  left: 0;
+   background: var(--gradient-4A);
+   backdrop-filter: blur(5px);
+  
+   
+}
+
+
+ section#hero::after {
+ left: 88%;
+  background: var(--gradient-4B);
+  backdrop-filter: blur(5px);
+
+ 
+  
+}
 #hero video{
   position: absolute;
-  width: 80%;
+  width: 100%;
   height: 100%;
   object-fit: cover;
   z-index: -1;
@@ -576,4 +619,35 @@ opacity: 0.5;
 }
 #hv-2{
   display: none;
+}
+
+#hero .hero-card{
+  width: fit-content;
+  height: 100%;
+  margin: 0 auto;
+  z-index: 20;
+  margin-top: 10%;
+  background: var(--background-gr);
+ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+
+
+}
+
+.hero-img-sign{
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.hero-img-sign .his-1{
+  display: none;
+
+}
+.hero-img-sign .his-2{
+  display: block;
+
 }
