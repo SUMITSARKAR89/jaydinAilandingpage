@@ -51,3 +51,6 @@ function countUp(elementId, target, speed) {
 }
 countUp("count1", 20, 100);
 countUp("count2", 98, 25);
+
+
+// 4 +=========================================== 
